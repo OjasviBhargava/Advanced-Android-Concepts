@@ -106,3 +106,18 @@ structure for how the files are stored.
 
 ***Ivy***
 `Apache Ivy` is an off-shoot of the Apache Ant project that gave us the Ant build system. Ivy is simply a way of declaring dependencies between components, including handling “transitive dependencies” (i.e., App A depends upon Library B, which in turn depends upon Libraries C and D).
+
+
+**Application ID**
+
+Your Application ID should be unique. If
+somebody tries downloading your application onto their device, and some other application is already installed with that same package name, your application will fail to install.
+
+Your application ID defaults to be the value of your `package attribute` in your manifest element in the manifest.
+
+*You can override the application ID using `applicationId` properties in `defaultConfig` or a product flavor in build.gradle.*
+
+You can also append an applicationIdSuffix tied to a build type in Gradle as well.
+Since the manifest’s package also provides the base Java package for your project, and since you hopefully named your Java packages with something based on a domain name you own or something else demonstrably unique, this should not cause a huge problem.
+
+*PS - Also, bear in mind that your application ID must be unique across all applications on the Play Store.*
