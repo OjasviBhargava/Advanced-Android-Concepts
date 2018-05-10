@@ -77,3 +77,18 @@ Furthermore, an event bus provides a standard communications channel (or “bus�
 *Greenrobots EventBus* (https://github.com/greenrobot/EventBus)
 Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality. With greenrobot’s EventBus, it is fairly easy to send a message from one part of your app to another disparate part of your app.
 EventBus - Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
+
+
+**Product Flavors**
+
+A product flavor is an independent axis for varying your output.
+
+*Product flavors are designed for scenarios where you want different release output for different cases.*
+
+For example, you may want to have one version of your app built to use Google’s in-app purchasing APIs (for distribution through the Play Store) and another version of your app built to use Amazon’s in-app purchasing APIs (for distribution through the Amazon AppStore for Android).
+In this case, both versions of the app will be available in release form, and you may wish to have *separate debug builds as well*. And most of the code for the two versions of the app will be the same.
+
+*However, you will have different code for the different distribution channels* — not only does the right code have to run for the right channel, but there is no particular value in distributing the code for one channel through the other channel.
+
+
+`Product flavors are optional. If you do not describe any product flavors in your build.gradle file, it is assumed that you have a single product flavor, referred to internally as default. Many apps will not need product flavors; this is a feature that you will opt into as needed.`
