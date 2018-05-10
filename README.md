@@ -60,3 +60,20 @@ An artifact is usually represented in the form of two files:
 
 `PS` - Artifacts are housed in artifact repositories. Those repositories not only contain the artifacts, but they organize the artifacts for easy access.
 • JCenter, is a popular place for open source artifacts
+
+
+**EventBuses**
+
+Event-driven programming has been around for nearly a quarter-century. Much of Android’s UI model is event-driven, where we find out about these events via callbacks and registered listeners. in 2012, event buses started to pop up, and these are very useful for organizing communication within your Android application and across threads.
+
+An event bus can eliminate the need for AsyncTask and the other solutions for communicating back to the main application thread, while simultaneously helping you logically decouple independent pieces of your code.
+
+
+`An event bus is designed to decouple the sources of events from the consumers of those events.`
+
+
+Furthermore, an event bus provides a standard communications channel (or “bus”) that event producers and event consumers can hook into. Event producers merely need to hand the event to the bus; the bus will handle directing those events to relevant consumers. This reduces the coupling between the producers and consumers, sometimes even reducing the amount of code needed to source and sink these events.
+
+*Greenrobots EventBus* (https://github.com/greenrobot/EventBus)
+Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality. With greenrobot’s EventBus, it is fairly easy to send a message from one part of your app to another disparate part of your app.
+EventBus - Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
