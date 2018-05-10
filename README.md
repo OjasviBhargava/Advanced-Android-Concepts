@@ -121,3 +121,21 @@ You can also append an applicationIdSuffix tied to a build type in Gradle as wel
 Since the manifest’s package also provides the base Java package for your project, and since you hopefully named your Java packages with something based on a domain name you own or something else demonstrably unique, this should not cause a huge problem.
 
 *PS - Also, bear in mind that your application ID must be unique across all applications on the Play Store.*
+
+
+**BuildConfig**
+
+The Android development tools have been code-generating the `BuildConfig` class for some time now. Historically, the sole element of that class was the `DEBUG` flag, which is true for a debug build and false otherwise. This is useful for doing runtime changes based upon build type, such as only configuring StrictMode in debug builds.
+
+Nowadays, the Android Plugin for Gradle also defines:yum::
+
+*• BUILD_TYPE*, which is the build type used to build this APK.
+
+*• FLAVOR*, which is the product flavor used to build this APK.
+
+*• PACKAGE_NAME*, which is the name that serves as the application ID (i.e., it includes build type suffixes and product flavor overrides). This is useful for cases where you cannot just call `getPackageName()` on a Context because you do not have a handy Context.
+
+*• VERSION_CODE*, which is the version code derived from your manifest in conjunction with any overrides coming from your `build.gradle` file.
+
+*• VERSION_NAME*, which is the version name derived from your manifest in
+conjunction with any overrides coming from your build.gradle file.
