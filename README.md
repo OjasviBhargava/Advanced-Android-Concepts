@@ -5,7 +5,7 @@ This repo is a part of Udacity Scholarship Program
 
 ***Advanced Android Tips and Tricks***
 
-**Code Signing**
+## **Code Signing**
 
 • It will help distinguish your production applications from debug versions of
 the same applications
@@ -35,7 +35,7 @@ or more is recommended
 recommended, or go higher if you prefer)
 
 
-**JARs and Artifacts**
+## **JARs and Artifacts**
 
 The first implementation statement in app level gradle file is:
 
@@ -62,7 +62,7 @@ An artifact is usually represented in the form of two files:
 • JCenter, is a popular place for open source artifacts
 
 
-**EventBuses**
+## **EventBuses**
 
 Event-driven programming has been around for nearly a quarter-century. Much of Android’s UI model is event-driven, where we find out about these events via callbacks and registered listeners. in 2012, event buses started to pop up, and these are very useful for organizing communication within your Android application and across threads.
 
@@ -79,7 +79,7 @@ Event bus for Android and Java that simplifies communication between Activities,
 EventBus - Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
 
 
-**Product Flavors**
+## **Product Flavors**
 
 A product flavor is an independent axis for varying your output.
 
@@ -94,7 +94,7 @@ In this case, both versions of the app will be available in release form, and yo
 `Product flavors are optional. If you do not describe any product flavors in your build.gradle file, it is assumed that you have a single product flavor, referred to internally as default. Many apps will not need product flavors; this is a feature that you will opt into as needed.`
 
 
-**Types of Artifacts and Repositories**
+## **Types of Artifacts and Repositories**
 
 There are two types of repositories, and associated artifact structures, supported by
 *Gradle*: *Maven and Ivy*.
@@ -108,7 +108,7 @@ structure for how the files are stored.
 `Apache Ivy` is an off-shoot of the Apache Ant project that gave us the Ant build system. Ivy is simply a way of declaring dependencies between components, including handling “transitive dependencies” (i.e., App A depends upon Library B, which in turn depends upon Libraries C and D).
 
 
-**Application ID**
+## **Application ID**
 
 Your Application ID should be unique. If
 somebody tries downloading your application onto their device, and some other application is already installed with that same package name, your application will fail to install.
@@ -123,7 +123,7 @@ Since the manifest’s package also provides the base Java package for your proj
 *PS - Also, bear in mind that your application ID must be unique across all applications on the Play Store.*
 
 
-**BuildConfig**
+## **BuildConfig**
 
 The Android development tools have been code-generating the `BuildConfig` class for some time now. Historically, the sole element of that class was the `DEBUG` flag, which is true for a debug build and false otherwise. This is useful for doing runtime changes based upon build type, such as only configuring StrictMode in debug builds.
 
