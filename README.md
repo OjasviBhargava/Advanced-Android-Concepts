@@ -92,3 +92,17 @@ In this case, both versions of the app will be available in release form, and yo
 
 
 `Product flavors are optional. If you do not describe any product flavors in your build.gradle file, it is assumed that you have a single product flavor, referred to internally as default. Many apps will not need product flavors; this is a feature that you will opt into as needed.`
+
+
+**Types of Artifacts and Repositories**
+
+There are two types of repositories, and associated artifact structures, supported by
+*Gradle*: *Maven and Ivy*.
+Each has their own format for the metadata and their own
+structure for how the files are stored.
+
+***Maven***
+`Apache Maven` is a full-fledged build system. Part of that build system is a system of artifacts and repositories. While Gradle does not use Maven’s build system — rather, it largely replaces it — Gradle can consume artifacts published in a Maven structured repository. Maven Central, as one might expect, is one such repository, but it is eminently possible to set up your own, and some organizations have done that.
+
+***Ivy***
+`Apache Ivy` is an off-shoot of the Apache Ant project that gave us the Ant build system. Ivy is simply a way of declaring dependencies between components, including handling “transitive dependencies” (i.e., App A depends upon Library B, which in turn depends upon Libraries C and D).
